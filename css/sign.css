@@ -1,0 +1,328 @@
+/* 
+Auther: Bilicat
+QQ: 1412073
+URL: bilicat.com
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    background-color: #f2f2f2;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, calc(-50% + 0.5px));
+}
+
+@keyframes appear {
+    0% {
+        transform: scale(.8);
+        opacity: .3;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.content {
+    width: 860px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    animation: appear .3s ease;
+}
+
+.content-login {
+    display: flex;
+    padding-top: 40px;
+    justify-content: center;
+}
+
+
+/* 扫码登录 */
+
+.qr-code {
+    width: 34%;
+    text-align: center;
+}
+
+.qr-code .p1 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.qr-code img {
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    background-color: #fff;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+.qr-code .p2,
+.qr-code .p3 {
+    width: 180px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.qr-code .p2 a {
+    text-decoration: none;
+    color: rgb(0, 161, 214);
+}
+
+
+/* 分割线 */
+
+.hr {
+    height: 240px;
+    width: 1px;
+    margin-top: 43px;
+    margin-left: 5px;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.login {
+    width: 60%;
+}
+
+.passwd-or-msg,
+.passwd,
+.msg {
+    text-align: center;
+}
+
+.passwd-or-msg {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.passwd-or-msg label {
+    font-size: 18px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.passwd-or-msg label:hover {
+    color: rgb(0, 161, 214);
+}
+
+.passwd-or-msg span {
+    display: inline-block;
+    margin: 0 25px;
+    height: 25px;
+    width: 1px;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+#tab label.tabFocus {
+    color: rgb(0, 161, 214);
+}
+
+#login-lab .msg {
+    display: none;
+}
+
+#login-lab #tab-oner.tabFocus {
+    display: block;
+}
+
+
+/* 密码登录 */
+
+.passwd form {
+    width: 390px;
+    margin: 0 auto;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.passwd .passwd-text {
+    padding: 2px 0;
+    font-size: 14px;
+}
+
+.passwd .text1 {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.passwd input {
+    width: 300px;
+    border: 0;
+    padding: 12px 0;
+    outline: none;
+    line-height: 12px;
+    padding-left: 20px;
+}
+
+input::-webkit-input-placeholder {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.msg form {
+    width: 390px;
+    margin: 0 auto;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.msg .msg-text {
+    padding: 2px 0;
+    font-size: 14px;
+}
+
+.msg .text1 {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.msg input {
+    width: 300px;
+    border: 0;
+    padding: 12px 0;
+    outline: none;
+    line-height: 12px;
+    padding-left: 20px;
+}
+
+.msg .msg-text input:nth-child(1) {
+    width: 200px;
+    padding-left: 20px;
+}
+
+.msg select {
+    margin-left: 5px;
+    border: 0;
+    outline: none;
+}
+
+.msg .msg-text span {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.msg .msg-text button {
+    border: 0;
+    background-color: #fff;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.msg .msg-text button:hover {
+    color: rgb(0, 161, 214);
+}
+
+
+/* 按钮 */
+
+.btn {
+    width: 390px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.btn-login-or-register {
+    background-color: #fff;
+    border: 0;
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 10px 80px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-login-or-register:nth-child(2) {
+    border: 0;
+    background-color: rgb(3, 175, 233);
+    color: #fff;
+    transition: all .3s ease;
+}
+
+.btn-login-or-register:nth-child(2):hover {
+    background-color: rgb(0, 161, 214);
+}
+
+
+/* 其他方式登录 */
+
+.login-other p:nth-child(1) {
+    text-align: center;
+    margin: 22px 0 15px 0;
+    font-size: 14px;
+    color: #999;
+}
+
+.login-other .login-way {
+    display: flex;
+    justify-content: center;
+}
+
+.login-other .login-way a {
+    text-decoration: none;
+}
+
+.login-other .login-way img {
+    width: 28px;
+    vertical-align: middle;
+}
+
+.login-other .login-way p {
+    display: inline;
+    color: #333;
+    font-size: 12px;
+}
+
+.login-other .login-way div {
+    margin: 0 16px;
+}
+
+
+/* 下半部分 */
+
+.content-privacy {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-privacy img {
+    height: 100px;
+    vertical-align: middle;
+}
+
+.content-privacy .box-privacy p {
+    font-size: 12px;
+    color: #999;
+    line-height: 20px;
+    text-align: center;
+}
+
+.content-privacy .box-privacy a {
+    color: rgb(0, 161, 214);
+    text-decoration: none;
+}
+
+.content-privacy img:nth-child(2),
+.content-privacy img:nth-child(2) {
+    display: none;
+}

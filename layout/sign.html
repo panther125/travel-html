@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh">
+<!-- Auther: Bilicat -->
+<!-- QQ: 1412073 -->
+<!-- URL: bilicat.com -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/sign.css">
+    <title>登录弹窗模板</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+
+            <!-- 登录上半部分 -->
+            <div class="content-login">
+
+                <!-- 扫码登录 -->
+                <div class="qr-code">
+                    <p class="p1">扫描二维码登录</p>
+                    <img src="../image/qrcode.png">
+                    <p class="p2">请使用<a href="#">哔哩哔哩客户端</a></p>
+                    <p class="p3">扫码登录或扫码下载APP</p>
+                </div>
+                <!-- 分割线 -->
+                <div class="hr"></div>
+
+                <!-- 密码或者短信登录 -->
+                <div class="login">
+                    <div class="passwd-or-msg" id="tab">
+                        <label class="tabFocus" for="">密码登录</label>
+                        <span></span>
+                        <label for="">短信登录</label>
+                    </div>
+
+                    <div id="login-lab">
+                        <!-- 密码登录 -->
+                        <div class="passwd conFocus tab-oner">
+                            <form action="">
+                                <div class="passwd-text text1">
+                                    <label for="">账号</label>
+                                    <input type="text" placeholder="请输入账号">
+                                </div>
+                                <div class="passwd-text text2">
+                                    <label for="">密码</label>
+                                    <input type="password" placeholder="请输入密码">
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- 短信登录 -->
+                        <div class="msg tab-oner">
+                            <form action="">
+                                <div class="msg-text text1">
+                                    <select name="">
+                                        <option value ="China">+86</option>
+                                        <option value ="America">+1</option>
+                                    </select>
+                                    <span class="msg-text">
+                                        <input type="text" placeholder="请输入手机号">
+                                        <span>|</span>
+                                    <a href="../index.html"><button>获取验证码</button></a>
+                                    </span>
+                                </div>
+                                <div class="msg-text text2">
+                                    <label for="">验证码</label>
+                                    <input type="text" placeholder="请输入验证码">
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="btn">
+                        <a href="../index.html"><button type="button" class="btn-login-or-register">注册</button></a>
+                        <a href="../index.html"><button type="button" class="btn-login-or-register">登录</button></a>
+                    </div>
+
+                    <!-- 其他方式登录 -->
+                    <div class="login-other">
+                        <p>其他方式登录</p>
+                        <div class="login-way">
+                            <div class="weixin">
+                                <a href="#">
+                                    <img src="../image/weixin.png" alt="">
+                                    <p>微信登录</p>
+                                </a>
+                            </div>
+                            <div class="weibo">
+                                <a href="#">
+                                    <img src="../image/weibo.png" alt="">
+                                    <p>微博登录</p>
+                                </a>
+                            </div>
+                            <div class="qq">
+                                <a href="#">
+                                    <img src="../image/qq.png" alt="">
+                                    <p>QQ登录</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 登录下半部分 -->
+            <div class="content-privacy">
+                <div class="box-left">
+                    <img src="../image/left.png" alt="">
+                    <img src="../image/left-passwd.png" alt="">
+                </div>
+                <div class="box-privacy">
+                    <p>未注册过哔哩哔哩的手机号，我们将自动帮你注册账号</p>
+                    <p>登录或完成注册即代表你同意 <a href="#">用户协议</a> 和 <a href="#">隐私政策</a></p>
+                </div>
+                <div class="box-right">
+                    <img src="../image/right.png" alt="">
+                    <img src="../image/right-passwd.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+    // 密码或短信登录
+    $(function() {
+        $("#tab label").each(function(index) {
+            $(this).click(function() {
+                $("#tab label.tabFocus").removeClass("tabFocus")
+                $(this).addClass("tabFocus");
+                $("#login-lab .tab-oner:eq(" + index + ")").show().siblings().hide();
+            })
+        });
+
+    });
+    // 睁眼或闭眼
+    $(".passwd .text2 input, .msg .text2 input").focus(function() {
+        $(".content-privacy img:nth-child(1)").css("display", "none");
+        $(".content-privacy img:nth-child(2)").css("display", "block");
+    });
+    $(".passwd .text2 input, .msg .text2 input").blur(function() {
+        $(".content-privacy img:nth-child(1)").css("display", "block");
+        $(".content-privacy img:nth-child(2)").css("display", "none");
+    });
+</script>
+
+</html>

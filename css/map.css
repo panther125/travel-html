@@ -1,0 +1,243 @@
+* {
+    margin: 0px;
+    border: 0;
+    cursor: url("../image/hand.png"), default;
+}
+
+ ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+ ::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: #49b1f5;
+    background-image: -webkit-linear-gradient(45deg, hsla(0, 0%, 100%, .4) 25%, transparent 0, transparent 50%, hsla(0, 0%, 100%, .4) 0, hsla(0, 0%, 100%, .4) 75%, transparent 0, transparent);
+    border-radius: 2em;
+}
+
+ ::-webkit-scrollbar-track {
+    background-color: rgba(73, 177, 245, .2);
+    border-radius: 2em;
+}
+
+.beij {
+    background-image: url(../image/bj.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100vh;
+    /*position: absolute;*/
+    /* margin-top: 70px; */
+}
+
+.ly {
+    display: inline-block;
+}
+
+.chose_up {
+    margin-top: 15px;
+    margin-left: 50px;
+    height: 100px;
+    width: 200px;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    background-color: green;
+    text-align: center;
+    font-size: 2em;
+}
+
+.chose_low {
+    margin-left: 50px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.chose_up p {
+    padding: 30px;
+    text-decoration: none;
+    font-family: '方正舒体'
+}
+
+.chose_up a {
+    text-decoration: none
+}
+
+.chose_up a:hover {
+    font-size: 1.1em;
+    color: yellow;
+    text-decoration: none
+}
+
+
+/*2 */
+
+.chose_up2 {
+    margin-top: 35px;
+    margin-left: 250px;
+    height: 100px;
+    width: 200px;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    background-color: blue;
+    text-align: center;
+    font-size: 2em;
+}
+
+.chose_low2 {
+    margin-left: 250px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.chose_up2 p {
+    padding: 30px;
+    text-decoration: none;
+    font-family: '方正舒体';
+}
+
+.chose_up2 a {
+    text-decoration: none
+}
+
+.chose_up2 a:hover {
+    font-size: 2em;
+    text-decoration: none
+}
+
+#wai {
+    background-image: url("https://pic.imgdb.cn/item/6278fcfc09475431297fe50c.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+#bigbox {
+    height: 100vh;
+    width: 100vw;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 2000px;
+    transform-style: preserve-3d;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg);
+    animation: moves1 60s linear infinite;
+    z-index: 10;
+}
+
+@keyframes moves1 {
+    0% {
+        transform: translateY(-80px) rotateX(-5deg) rotateY(0deg);
+    }
+    100% {
+        transform: translateY(-80px) rotateX(-5deg) rotateY(360deg);
+    }
+}
+
+.box div {
+    position: absolute;
+    transform-origin: center;
+    transform: rotateY(calc(45deg * var(--i))) translateZ(500px) scale(.8);
+}
+
+.box img {
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.box h1 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    font-size: 80px;
+    font-family: "方正舒体";
+    /*animation: moves2 6s linear infinite;*/
+}
+
+@keyframes moves2 {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(-360deg);
+    }
+}
+
+.box:hover {
+    animation-play-state: paused;
+}
+
+.box:hover h1 {
+    animation-play-state: paused;
+}
+
+.section-header p {
+    text-align: center;
+    padding-bottom: 30px;
+    color: #333;
+}
+
+.section-header h3 {
+    font-size: 32px;
+    color: rgb(15, 14, 15);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-header h3::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+
+.section-header p {
+    text-align: center;
+    padding-bottom: 30px;
+    color: #333;
+}
+
+.section-header h3::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #87CEEB;
+    bottom: 0;
+    left: calc(50% - 20px);
+}

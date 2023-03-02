@@ -1,0 +1,319 @@
+* {
+    margin: 0px;
+    border: 0;
+    cursor: url("../image/hand.png"), default;
+}
+
+ ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+ ::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: #49b1f5;
+    background-image: -webkit-linear-gradient(45deg, hsla(0, 0%, 100%, .4) 25%, transparent 0, transparent 50%, hsla(0, 0%, 100%, .4) 0, hsla(0, 0%, 100%, .4) 75%, transparent 0, transparent);
+    border-radius: 2em;
+}
+
+ ::-webkit-scrollbar-track {
+    background-color: rgba(73, 177, 245, .2);
+    border-radius: 2em;
+}
+
+#menubj {
+    padding-top: 250px;
+    text-align: center;
+    height: 100vh;
+    background-image: url("https://pic.imgdb.cn/item/6278ca7e0947543129006163.jpg");
+    background-repeat: no-repeat;
+}
+
+
+/* #menuspan {
+    /* line-height: 300px; 
+    font-family: "华文彩云";
+    font-size: 3.1em;
+    color: rgb(8, 8, 136);
+} */
+
+
+/* 
+#menuspan p {
+    /* line-height: 300px; 
+    font-size: 0.7em;
+    font-family: "华文仿宋";
+} */
+
+footer,
+header,
+section {
+    display: block;
+}
+
+#services {
+    background: #fff;
+    background-size: cover;
+    padding: 60px 0 40px 0;
+}
+
+#services .box {
+    margin-bottom: 30px;
+}
+
+*,
+ ::after,
+ ::before {
+    box-sizing: border-box;
+}
+
+.col-lg-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+.container {
+    max-width: 960px;
+    padding-right: -15px;
+    padding-left: -15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.section-header p {
+    text-align: center;
+    padding-bottom: 30px;
+    color: #333;
+}
+
+.section-header h3 {
+    font-size: 32px;
+    color: rgb(15, 14, 15);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-header h3::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+
+.section-header p {
+    text-align: center;
+    padding-bottom: 30px;
+    color: #333;
+}
+
+.section-header h3::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #87CEEB;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-lg-4,
+.col-md-6 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#services .title {
+    margin-left: 60px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+#services .title a {
+    color: #111;
+    text-decoration: none;
+}
+
+#services .title a:hover {
+    color: skyblue;
+    text-decoration: none;
+}
+
+#services .description {
+    font-size: 14px;
+    margin-left: 60px;
+    line-height: 20px;
+    margin-bottom: 0;
+}
+
+#services .icon {
+    float: left;
+}
+
+#services .icon i {
+    color: #87CEEB;
+    font-size: 36px;
+    line-height: 1;
+    transition: 0.5s;
+}
+
+.ion-ios-analytics-outline:before {
+    content: "\f3cd";
+}
+
+p {
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+h4 {
+    font-family: "Montserrat";
+    font-weight: 400;
+    color: #666;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.h4,
+h4 {
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+
+#facts {
+    height: 400px;
+    background: url("https://pic.imgdb.cn/item/6278cb4b0947543129028ef2.jpg") center top no-repeat fixed;
+    background-size: cover;
+    padding: 60px 0 0 0;
+    position: relative;
+}
+
+#facts::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(37, 35, 35, 0.88);
+    z-index: 9;
+}
+
+#facts .container {
+    max-width: 720px;
+    position: relative;
+    z-index: 10;
+}
+
+.section-header h3::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+
+.section-header h3::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+
+.section-header h3::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #87CEEB;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+
+.section-header p {
+    text-align: center;
+    padding-bottom: 30px;
+    color: #333;
+}
+
+@keyframes bounceInUp {
+    0%,
+    60%,
+    75%,
+    90%,
+    to {
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+    }
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 3000px, 0)
+    }
+    60% {
+        opacity: 1;
+        transform: translate3d(0, -20px, 0)
+    }
+    75% {
+        transform: translate3d(0, 10px, 0)
+    }
+    90% {
+        transform: translate3d(0, -5px, 0)
+    }
+    to {
+        transform: translateZ(0)
+    }
+}
+
+.bounceInUp {
+    animation-name: bounceInUp
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both
+}
+
+.animated.infinite {
+    animation-iteration-count: infinite
+}
+
+.animated.hinge {
+    animation-duration: 2s
+}
+
+.animated.bounceIn {
+    animation-duration: .75s
+}

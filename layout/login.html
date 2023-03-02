@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>网页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        
+        .from {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .bgc {
+            width: 100%;
+        }
+        
+        .submit {
+            position: absolute;
+            z-index: 9;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            margin-top: 150px;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form_title {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 18px;
+        }
+        
+        .form_input {
+            padding: 0 30px;
+            box-sizing: border-box;
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .inputs {
+            height: 40px;
+            width: 300px;
+            border-radius: 5px;
+            border: none;
+            background-color: #eee;
+            color: #666;
+            padding-left: 20px;
+        }
+        
+        .form_input span {
+            width: 85px;
+            align-self: center;
+        }
+        
+        .btn_submit {
+            align-self: center;
+        }
+        
+        .btn {
+            border: none;
+            width: 80px;
+            height: 40px;
+            color: #fff;
+            border-radius: 5px;
+            background: #999;
+            margin-top: 40px;
+        }
+        
+        .btn:hover {
+            background: #666;
+        }
+        
+        .back {
+            margin-left: 10px;
+        }
+        
+        .home_href {
+            border: none;
+            width: 80px;
+            height: 40px;
+            color: #fff;
+            border-radius: 5px;
+            background: #FFD204;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="from">
+        <img class="bgc" src="https://pic.imgdb.cn/item/6278f71c094754312971b36e.jpg" alt="">
+        <div class="submit">
+            <span class="form_title">个人信息提交</span>
+            <div class="form_input">
+                <span>姓名：</span>
+                <input class="inputs" type="text" value="窝窝侠">
+            </div>
+            <div class="form_input">
+                <span>班级:</span>
+                <input class="inputs" type="text" value="计科204">
+            </div>
+            <div class="form_input">
+                <span>学号：</span>
+                <input class="inputs" type="text" value="7020820139">
+            </div>
+            <div class="form_input">
+                <span>系部：</span>
+                <input class="inputs" type="text" value="计算机科学与技术">
+            </div>
+            <div class="form_input">
+                <span>课程名称：</span>
+                <input class="inputs" type="text" value="网页设计">
+            </div>
+            <div class="btn_submit">
+                <a href="../index.html">
+                    <button class="btn">提交</button></a>
+                <a href="../index.html" class="back"><button class="home_href">首页</button></a>
+            </div>
+        </div>
+    </div>
+</body>

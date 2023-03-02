@@ -1,0 +1,274 @@
+* {
+    margin: 0px;
+    border: 0;
+    cursor: url("../image/hand.png"), default;
+}
+
+ ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+ ::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: #49b1f5;
+    background-image: -webkit-linear-gradient(45deg, hsla(0, 0%, 100%, .4) 25%, transparent 0, transparent 50%, hsla(0, 0%, 100%, .4) 0, hsla(0, 0%, 100%, .4) 75%, transparent 0, transparent);
+    border-radius: 2em;
+}
+
+ ::-webkit-scrollbar-track {
+    background-color: rgba(73, 177, 245, .2);
+    border-radius: 2em;
+}
+
+.ceb {
+    margin-top: 2%;
+    float: left;
+    width: 220px;
+    height: 100%;
+}
+
+#title {
+    float: left;
+    margin-left: 15px;
+    width: 180px;
+    height: 200px;
+    background-image: url("../image/toux.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#name {
+    float: left;
+    margin-left: 20px;
+    width: 180px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#name:hover {
+    font-size: 2em;
+    color: rgb(80, 80, 5);
+}
+
+#myself {
+    float: left;
+    font-size: 0;
+    text-align: left;
+}
+
+#myself a {
+    font-size: 18px;
+    display: inline-block;
+    margin-left: 30px;
+    text-align: center;
+    margin-bottom: 14px;
+    text-decoration: none;
+}
+
+#texts a {
+    text-decoration: none;
+    color: #000;
+}
+
+#texts h4 {
+    float: left;
+    color: #000;
+    margin: 5px;
+    border-left: 8px solid #2d8cf0;
+    margin: 5px;
+    font-size: 36px;
+    text-indent: 1em;
+}
+
+#texts h5 {
+    float: left;
+    color: #000;
+    margin-left: 20px;
+    border-left: 5px solid #a2dd72;
+    margin: 5px;
+    font-size: 20px;
+    text-indent: 1em;
+}
+
+#p_b_follow {
+    margin-left: 8px;
+    text-align: center;
+    margin-bottom: 10px;
+    border: 1px solid #2f2f2f;
+    font-size: 13px;
+    border-radius: 4px;
+    width: 200px;
+    font-weight: 300;
+}
+
+#p_b_follow a {
+    font-size: 18px;
+    display: inline-block;
+    margin-left: 6px;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+#p_b_follow:hover {
+    margin-left: 8px;
+    text-align: center;
+    margin-bottom: 10px;
+    border: 2px solid #2d8cf0;
+    font-size: 13px;
+    border-radius: 4px;
+    width: 200px;
+    font-weight: 300;
+}
+
+.container {
+    max-width: 1160px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 5%;
+    margin-left: auto;
+}
+
+.neirong-jian {
+    border: 1px solid #8D843D;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+}
+
+.col-h4 {
+    margin-top: 20px;
+}
+
+.row-hr {
+    width: 100%;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.col-img {
+    margin-left: 20px;
+}
+
+.col-img img {
+    width: 100%;
+    height: 400px;
+}
+
+.wenzi {
+    color: #666;
+    margin: 20px 9px;
+    text-indent: 2em;
+    float: left;
+}
+
+.wenzi img {
+    width: 80%;
+    height: auto;
+    float: left;
+}
+
+.wenzi a {
+    color: rgb(32, 41, 167);
+    margin: 20px 9px;
+    text-indent: 2em;
+    text-decoration: none;
+}
+
+.wenzi p {
+    margin: 2px 0px;
+}
+
+h4 {
+    color: #8D843D;
+    margin: 20px;
+    border-left: 10px solid #8D843D;
+    padding-left: 20px;
+    font-size: 36px;
+}
+
+h5 {
+    color: #8D843D;
+    margin: 5px;
+    border-left: 8px solid #8D843D;
+    font-size: 25px;
+}
+
+h6 {
+    color: #140511;
+    margin: 15px 30px;
+    border-left: 5px solid #13a6ca;
+    font-size: 20px;
+}
+
+.footer {
+    background-image: url("../image/footer.jpg");
+    background-repeat: no-repeat;
+    color: #000;
+    padding-top: 20px;
+    padding-left: 150px;
+    margin-top: 0;
+    margin-right: 19px;
+    margin-left: 240px;
+    text-align: left;
+    line-height: 0em;
+    height: 70px;
+}
+
+.foot_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 75px;
+}
+
+#link {
+    font-size: 20px;
+    clear: both;
+}
+
+#navList li {
+    float: left;
+    margin: 0 40px 0 0;
+}
+
+#navList {
+    list-style: none;
+    min-height: 30px;
+    float: left;
+}
+
+#navList a {
+    display: block;
+    width: 5em;
+    float: left;
+    text-align: center;
+    padding-top: 5px;
+    text-decoration: none;
+}
+
+#navList a:link,
+#navList a:visited,
+#navList a:active {
+    color: #6a6a6a;
+    font-weight: bold;
+}
+
+#navList a:hover {
+    color: #2d8cf0;
+}

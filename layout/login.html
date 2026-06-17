@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <title>个人信息提交 · 盗墓笔记</title>
+    <style>
+        body {
+            background-image: url("../image/bg/login-bg.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: rgba(11, 13, 16, 0.8);
+            z-index: 0;
+        }
+        .from {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+        }
+        .submit {
+            position: absolute;
+            z-index: 9;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            max-width: 90vw;
+            background: var(--stone-surface);
+            border: 1px solid var(--mist);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-deep);
+            color: var(--bone);
+            display: flex;
+            flex-direction: column;
+            padding: 32px;
+        }
+        .form_title {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 18px;
+            font-family: var(--font-display);
+            letter-spacing: 3px;
+            color: var(--bone);
+        }
+        .form_input {
+            padding: 0 30px;
+            display: flex;
+            margin-top: 16px;
+            align-items: center;
+        }
+        .inputs {
+            height: 40px;
+            flex: 1;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--mist);
+            background-color: var(--dark-stone);
+            color: var(--bone);
+            padding-left: 16px;
+            font-size: 14px;
+            transition: border-color var(--transition-fast);
+        }
+        .inputs:focus {
+            outline: none;
+            border-color: var(--jade);
+        }
+        .form_input span {
+            width: 85px;
+            flex-shrink: 0;
+            font-size: 14px;
+            color: var(--bone-dim);
+        }
+        .btn_submit {
+            align-self: center;
+            margin-top: 28px;
+            display: flex;
+            gap: 12px;
+        }
+        .btn {
+            border: none;
+            width: 100px;
+            height: 40px;
+            color: var(--bone);
+            border-radius: var(--radius-md);
+            background: var(--jade-dim);
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 14px;
+        }
+        .btn:hover {
+            background: var(--jade);
+        }
+        .home_href {
+            border: 1px solid var(--mist);
+            width: 100px;
+            height: 40px;
+            color: var(--bone-dim);
+            border-radius: var(--radius-md);
+            background: transparent;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: all var(--transition-fast);
+        }
+        .home_href:hover {
+            border-color: var(--jade);
+            color: var(--jade-glow);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="from">
+        <div class="submit">
+            <span class="form_title">个人信息提交</span>
+            <div class="form_input">
+                <span>姓名：</span>
+                <input class="inputs" type="text" value="窝窝侠">
+            </div>
+            <div class="form_input">
+                <span>班级:</span>
+                <input class="inputs" type="text" value="计科204">
+            </div>
+            <div class="form_input">
+                <span>学号：</span>
+                <input class="inputs" type="text" value="7020820139">
+            </div>
+            <div class="form_input">
+                <span>系部：</span>
+                <input class="inputs" type="text" value="计算机科学与技术">
+            </div>
+            <div class="form_input">
+                <span>课程名称：</span>
+                <input class="inputs" type="text" value="网页设计">
+            </div>
+            <div class="btn_submit">
+                <a href="../index.html"><button class="btn">提交</button></a>
+                <a href="../index.html" class="home_href">首页</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

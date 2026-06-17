@@ -1,0 +1,199 @@
+/* ============================================
+   Map Page — Dark Tomb Theme
+   ============================================ */
+
+.beij {
+    background-image: url(../image/bj.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 20px 0;
+    position: relative;
+}
+
+.beij::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 13, 16, 0.5);
+    z-index: 0;
+}
+
+.ly {
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+.chose_up,
+.chose_up2 {
+    height: 100px;
+    width: 200px;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    text-align: center;
+    font-size: 1.8em;
+    font-family: var(--font-display);
+    transition: transform var(--transition-med), box-shadow var(--transition-med);
+}
+
+.chose_up {
+    margin-top: 15px;
+    margin-left: 50px;
+    background: linear-gradient(135deg, var(--jade-dim), var(--jade));
+}
+
+.chose_up2 {
+    margin-top: 35px;
+    margin-left: 250px;
+    background: linear-gradient(135deg, var(--bronze-dark), var(--bronze));
+}
+
+.chose_up:hover,
+.chose_up2:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.chose_low,
+.chose_low2 {
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.chose_low {
+    margin-left: 50px;
+}
+
+.chose_low2 {
+    margin-left: 250px;
+}
+
+.chose_up p,
+.chose_up2 p {
+    padding: 30px;
+    color: var(--bone);
+}
+
+.chose_up a,
+.chose_up2 a {
+    text-decoration: none;
+    color: var(--bone);
+}
+
+.chose_up a:hover {
+    color: var(--jade-glow);
+}
+
+.chose_up2 a:hover {
+    color: var(--bronze-light);
+}
+
+/* 3D Carousel */
+#wai {
+    background-image: url("../image/bg/map-carousel-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#wai::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 13, 16, 0.4);
+}
+
+#bigbox {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 2000px;
+    transform-style: preserve-3d;
+    position: relative;
+    z-index: 1;
+}
+
+#bigbox .box {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg);
+    animation: moves1 60s linear infinite;
+    z-index: 10;
+}
+
+@keyframes moves1 {
+    0% { transform: translateY(-80px) rotateX(-5deg) rotateY(0deg); }
+    100% { transform: translateY(-80px) rotateX(-5deg) rotateY(360deg); }
+}
+
+#bigbox .box div {
+    position: absolute;
+    transform-origin: center;
+    transform: rotateY(calc(45deg * var(--i))) translateZ(500px) scale(.8);
+}
+
+#bigbox .box img {
+    width: 300px;
+    height: 400px;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--mist);
+}
+
+#bigbox .box h1 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: var(--bone);
+    font-size: 60px;
+    font-family: var(--font-display);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+#bigbox .box:hover {
+    animation-play-state: paused;
+}
+
+#bigbox .box:hover h1 {
+    animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+    .ly {
+        display: block;
+        text-align: center;
+    }
+    .chose_up,
+    .chose_up2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .chose_low,
+    .chose_low2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #bigbox .box img {
+        width: 150px;
+        height: 200px;
+    }
+    #bigbox .box h1 {
+        font-size: 36px;
+    }
+}

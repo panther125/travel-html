@@ -1,0 +1,195 @@
+/* ============================================
+   Article Listing — Dark Glassmorphic Cards
+   ============================================ */
+
+#aboutbj {
+    height: 60vh;
+    background-image: url("../image/bg/test-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#aboutbj::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(11, 13, 16, 0.5) 0%,
+        rgba(11, 13, 16, 0.3) 50%,
+        rgba(11, 13, 16, 0.8) 100%
+    );
+}
+
+/* Grid */
+.post.news {
+    max-width: 1200px;
+    width: 100%;
+    margin: -80px auto 0;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.post.news.top {
+    padding-top: 10px;
+}
+
+.post.news .PostNews ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Card */
+.post.news li {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background: var(--stone-surface);
+    border: 1px solid var(--mist);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: transform var(--transition-med), border-color var(--transition-med), box-shadow var(--transition-med);
+}
+
+.post.news li:hover {
+    transform: translateY(-6px);
+    border-color: var(--jade-dim);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 16px rgba(42, 124, 94, 0.1);
+}
+
+/* Image */
+.imgBox {
+    margin-top: 0;
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+    transition: height var(--transition-med);
+}
+
+.imgBox:hover {
+    height: 240px;
+}
+
+.imgBox:after {
+    content: '';
+    display: block;
+    padding-top: 72%;
+}
+
+.PostNews li img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.post.news li:hover .PostNews li img,
+.post.news li:hover .imgBox img {
+    transform: scale(1.05);
+}
+
+/* Text Area */
+.post.news li .imgText {
+    text-align: left;
+    background: var(--stone-surface);
+    padding: 16px 16px 32px;
+    position: relative;
+    transition: background var(--transition-med);
+    border-top: 1px solid var(--mist);
+}
+
+.post.news li:hover .imgText {
+    background: rgba(42, 124, 94, 0.08);
+}
+
+.post.news .imgText h4 {
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0 0 8px;
+    overflow: hidden;
+    margin: 0;
+    font-weight: 600;
+    color: var(--bone);
+}
+
+.post.news .imgText h4 a {
+    color: var(--bone);
+    transition: color var(--transition-fast);
+}
+
+.post.news li:hover .imgText h4 a {
+    color: var(--jade-glow);
+}
+
+.post.news .imgText p {
+    height: 42px;
+    padding: 0;
+    font-size: 12px;
+    color: var(--bone-dim);
+    overflow: hidden;
+    line-height: 1.7;
+}
+
+a {
+    color: var(--bone);
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+/* Time */
+.time {
+    float: left;
+    bottom: 12px;
+    height: 12px;
+    line-height: 12px;
+    font-size: 11px;
+    color: var(--bronze-dark);
+    letter-spacing: 1px;
+}
+
+/* Arrow */
+.right {
+    float: left;
+    margin-top: 60px;
+    padding-left: 200px;
+    width: 28px;
+    height: 40px;
+    background-image: url("../image/right.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all var(--transition-med);
+    opacity: 0.5;
+}
+
+.post.news li:hover .right {
+    opacity: 1;
+    padding-left: 210px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .post.news .PostNews ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .post.news .PostNews ul {
+        grid-template-columns: 1fr;
+    }
+    .post.news {
+        margin-top: -40px;
+    }
+    #aboutbj {
+        height: 40vh;
+    }
+}

@@ -1,0 +1,144 @@
+/* ============================================
+   Index Page — Hero, Services, Facts
+   ============================================ */
+
+/* Hero */
+#menubj {
+    padding-top: 200px;
+    text-align: center;
+    height: 100vh;
+    background-image: url("../image/bg/menubj-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#menubj::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(11, 13, 16, 0.6) 0%,
+        rgba(11, 13, 16, 0.3) 40%,
+        rgba(11, 13, 16, 0.7) 100%
+    );
+}
+
+/* Services */
+#services {
+    background: var(--dark-stone);
+    padding: 80px 0 60px;
+    border-top: 1px solid var(--mist);
+    border-bottom: 1px solid var(--mist);
+}
+
+.col-lg-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+#services .box {
+    margin-bottom: 30px;
+    padding: 24px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--mist);
+    background: var(--stone-surface);
+    transition: border-color var(--transition-med), box-shadow var(--transition-med);
+}
+
+#services .box:hover {
+    border-color: var(--jade-dim);
+    box-shadow: var(--shadow-glow);
+}
+
+#services .title {
+    margin-left: 60px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+#services .title a {
+    color: var(--bone);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+#services .title a:hover {
+    color: var(--jade-glow);
+}
+
+#services .description {
+    font-size: 14px;
+    margin-left: 60px;
+    line-height: 1.8;
+    color: var(--bone-dim);
+}
+
+#services .icon {
+    float: left;
+}
+
+#services .icon i {
+    color: var(--jade);
+    font-size: 32px;
+    line-height: 1;
+    transition: color var(--transition-med), transform var(--transition-med);
+}
+
+#services .box:hover .icon i {
+    color: var(--jade-glow);
+    transform: scale(1.1);
+}
+
+/* Facts / Welcome */
+#facts {
+    min-height: 360px;
+    background: url("../image/bg/facts-bg.jpg") center top no-repeat fixed;
+    background-size: cover;
+    padding: 80px 0;
+    position: relative;
+}
+
+#facts::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 13, 16, 0.88);
+    z-index: 9;
+}
+
+#facts .container {
+    max-width: 720px;
+    position: relative;
+    z-index: 10;
+}
+
+#facts .section-header h3 {
+    color: var(--bone);
+    font-family: var(--font-display);
+    font-size: 32px;
+    letter-spacing: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .col-lg-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    #services .title,
+    #services .description {
+        margin-left: 0;
+        text-align: center;
+    }
+    #services .icon {
+        float: none;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    #services .box {
+        padding: 20px 16px;
+    }
+}

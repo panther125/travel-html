@@ -1,0 +1,207 @@
+/* ============================================
+   About Page — Dark Tomb Theme
+   ============================================ */
+
+#aboutbj {
+    height: 100vh;
+    background-image: url("../image/bg/about-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#aboutbj::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 13, 16, 0.75);
+}
+
+.wrapBox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 64px;
+    z-index: 2;
+}
+
+.box {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.box_content {
+    top: 28px;
+    width: 80%;
+    left: 10%;
+    position: absolute;
+    z-index: 2;
+}
+
+/* Skill Bars */
+#bar_container {
+    float: left;
+    color: var(--bone);
+    width: 50%;
+}
+
+#bar_container .bar {
+    margin: 24px 0;
+}
+
+.bar {
+    height: 36px;
+    width: 0;
+    transition: width 1.2s ease-in-out;
+    position: relative;
+    margin: 24px 0;
+    border-radius: var(--radius-sm);
+}
+
+.bar.active:before,
+.bar.active:after {
+    opacity: 1;
+    font-size: 14px;
+}
+
+.bar:before {
+    content: attr(data-skill);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    height: 36px;
+    font-style: italic;
+    opacity: 0;
+    transition: opacity 2s 0.6s;
+    color: var(--bone);
+}
+
+.bar:after {
+    content: attr(data-percent) "%";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 36px;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 2s 0.6s;
+    color: var(--bone);
+}
+
+/* Bar colors — jade/bronze theme */
+.bar.mint { background: repeating-linear-gradient(-45deg, var(--jade-dim), var(--jade-dim) 30px, var(--jade) 30px, var(--jade) 60px); background-size: 600px 100%; animation: barberpole 12s linear infinite; border-bottom: 4px solid rgba(42, 124, 94, 0.4); }
+.bar.red { background: repeating-linear-gradient(-45deg, var(--bronze-dark), var(--bronze-dark) 30px, var(--bronze) 30px, var(--bronze) 60px); background-size: 600px 100%; animation: barberpole 12s linear infinite; border-bottom: 4px solid rgba(176, 141, 87, 0.4); }
+.bar.lila { background: repeating-linear-gradient(-45deg, #4a3f6b, #4a3f6b 30px, #5c4f82 30px, #5c4f82 60px); background-size: 600px 100%; animation: barberpole 12s linear infinite; border-bottom: 4px solid rgba(74, 63, 107, 0.4); }
+.bar.orange { background: repeating-linear-gradient(-45deg, #6b4a3a, #6b4a3a 30px, #825c4f 30px, #825c4f 60px); background-size: 600px 100%; animation: barberpole 12s linear infinite; border-bottom: 4px solid rgba(107, 74, 58, 0.4); }
+.bar.gray { background: repeating-linear-gradient(-45deg, #3a4a52, #3a4a52 30px, #4a5c65 30px, #4a5c65 60px); background-size: 600px 100%; animation: barberpole 12s linear infinite; border-bottom: 4px solid rgba(58, 74, 82, 0.4); }
+.bar.blue { background: repeating-linear-gradient(-45deg, #3a3f4a, #3a3f4a 30px, #4a505c 30px, #4a505c 60px); background-size: 600px 100%; animation: barberpole 12s linear infinite; border-bottom: 4px solid rgba(58, 63, 74, 0.4); }
+.bar.green { background: repeating-linear-gradient(-45deg, var(--jade-dim), var(--jade-dim) 30px, var(--jade) 30px, var(--jade) 60px); background-size: 600px 100%; animation: barberpole 12s linear infinite; border-bottom: 4px solid rgba(42, 124, 94, 0.4); }
+
+.bar.active[data-percent="70"] { width: 70%; }
+.bar.active[data-percent="50"] { width: 50%; }
+.bar.active[data-percent="30"] { width: 30%; }
+.bar.active[data-percent="60"] { width: 60%; }
+
+/* Timeline Text */
+#box02_text {
+    float: left;
+    width: 50%;
+    min-width: 400px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#box02_text h1 {
+    font-size: 22px;
+    font-weight: 400;
+    font-family: var(--font-display);
+    color: var(--bone);
+    margin-top: 25px;
+    text-align: center;
+    position: relative;
+    animation: slideInRight 0.8s ease forwards;
+    letter-spacing: 3px;
+}
+
+.overline {
+    width: 100%;
+    height: 0;
+    border-bottom: 1px dashed var(--jade-dim);
+    position: relative;
+    animation: slideInRight 0.8s 0.2s ease forwards;
+    opacity: 0;
+}
+
+#box02_text p {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--bone-dim);
+    line-height: 2;
+    text-align: center;
+    position: relative;
+    animation: slideInRight 0.8s ease forwards;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+#box02_text p:nth-child(3) { animation-delay: 0.3s; }
+#box02_text p:nth-child(4) { animation-delay: 0.4s; }
+#box02_text p:nth-child(5) { animation-delay: 0.5s; }
+#box02_text p:nth-child(6) { animation-delay: 0.6s; }
+#box02_text p:nth-child(7) { animation-delay: 0.7s; }
+#box02_text p:nth-child(8) { animation-delay: 0.8s; }
+#box02_text p:nth-child(9) { animation-delay: 0.9s; }
+#box02_text p:nth-child(10) { animation-delay: 1.0s; }
+#box02_text p:nth-child(11) { animation-delay: 1.1s; }
+#box02_text p:nth-child(12) { animation-delay: 1.2s; }
+#box02_text p:nth-child(13) { animation-delay: 1.3s; }
+#box02_text p:nth-child(14) { animation-delay: 1.4s; }
+
+#box02_text p:hover {
+    color: var(--jade-glow);
+}
+
+.clear {
+    clear: both;
+}
+
+@keyframes barberpole {
+    from { background-position: 0% 0%; }
+    to { background-position: 600px 0%; }
+}
+
+@keyframes slideInRight {
+    from {
+        right: -100%;
+        opacity: 0;
+    }
+    to {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .box_content {
+        left: 0;
+        width: 100%;
+    }
+    #bar_container {
+        width: 90%;
+        margin: 0 auto;
+        float: none;
+    }
+    #box02_text {
+        width: 90%;
+        margin: 0 auto;
+        float: none;
+        min-width: auto;
+    }
+}

@@ -1,0 +1,332 @@
+/* ============================================
+   Login/Register Page — Dark Tomb Theme
+   ============================================ */
+
+body {
+    font-family: var(--font-body);
+    color: var(--bone);
+    background-color: var(--tomb-black);
+    background-image: url("../image/bg/login-bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(11, 13, 16, 0.8);
+    z-index: 0;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, calc(-50% + 0.5px));
+    z-index: 1;
+}
+
+@keyframes appear {
+    0% { transform: scale(.95); opacity: .5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.content {
+    width: 860px;
+    background-color: var(--stone-surface);
+    border: 1px solid var(--mist);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-deep);
+    overflow: hidden;
+    animation: appear .4s ease;
+}
+
+.content-login {
+    display: flex;
+    padding-top: 40px;
+    justify-content: center;
+}
+
+/* QR Code */
+.qr-code {
+    width: 34%;
+    text-align: center;
+}
+
+.qr-code .p1 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--bone);
+    font-family: var(--font-display);
+}
+
+.qr-code img {
+    padding: 5px;
+    border: 1px solid var(--mist);
+    border-radius: var(--radius-md);
+    background-color: var(--dark-stone);
+    margin-bottom: 20px;
+}
+
+.qr-code .p2,
+.qr-code .p3 {
+    width: 180px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--bone-dim);
+}
+
+.qr-code .p2 a {
+    text-decoration: none;
+    color: var(--jade-glow);
+}
+
+/* Divider */
+.hr {
+    height: 240px;
+    width: 1px;
+    margin-top: 43px;
+    margin-left: 5px;
+    background-color: var(--mist);
+}
+
+.login {
+    width: 60%;
+}
+
+.passwd-or-msg,
+.passwd,
+.msg {
+    text-align: center;
+}
+
+.passwd-or-msg {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.passwd-or-msg label {
+    font-size: 16px;
+    cursor: pointer;
+    transition: color .3s;
+    color: var(--bone-dim);
+}
+
+.passwd-or-msg label:hover {
+    color: var(--jade-glow);
+}
+
+.passwd-or-msg span {
+    display: inline-block;
+    margin: 0 25px;
+    height: 25px;
+    width: 1px;
+    background-color: var(--mist);
+}
+
+#tab label.tabFocus {
+    color: var(--jade-glow);
+}
+
+#login-lab .msg {
+    display: none;
+}
+
+/* Password Login */
+.passwd form,
+.msg form {
+    width: 390px;
+    margin: 0 auto;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--mist);
+    background: var(--dark-stone);
+}
+
+.passwd .passwd-text,
+.msg .msg-text {
+    padding: 2px 0;
+    font-size: 14px;
+    color: var(--bone-dim);
+}
+
+.passwd .text1,
+.msg .text1 {
+    border-bottom: 1px solid var(--mist);
+}
+
+.passwd input,
+.msg input {
+    width: 300px;
+    border: 0;
+    padding: 12px 0 12px 20px;
+    outline: none;
+    line-height: 12px;
+    background: transparent;
+    color: var(--bone);
+}
+
+input::-webkit-input-placeholder {
+    color: var(--bone-dim);
+    font-size: 14px;
+}
+
+.msg .msg-text input:nth-child(1) {
+    width: 200px;
+}
+
+.msg select {
+    margin-left: 5px;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: var(--bone-dim);
+}
+
+.msg .msg-text span {
+    color: var(--bone-dim);
+}
+
+.msg .msg-text button {
+    border: 0;
+    background-color: transparent;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: color .3s;
+    color: var(--bone-dim);
+}
+
+.msg .msg-text button:hover {
+    color: var(--jade-glow);
+}
+
+/* Buttons */
+.btn {
+    width: 390px;
+    margin: 24px auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-login-or-register {
+    background-color: transparent;
+    border: 1px solid var(--mist);
+    padding: 10px 80px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--bone-dim);
+    transition: all var(--transition-fast);
+}
+
+.btn-login-or-register:hover {
+    border-color: var(--bone-dim);
+    color: var(--bone);
+}
+
+.btn-login-or-register:nth-child(2) {
+    border: 0;
+    background-color: var(--jade);
+    color: var(--bone);
+    transition: background-color .3s;
+}
+
+.btn-login-or-register:nth-child(2):hover {
+    background-color: var(--jade-glow);
+}
+
+/* Other Login Methods */
+.login-other p:nth-child(1) {
+    text-align: center;
+    margin: 22px 0 15px;
+    font-size: 13px;
+    color: var(--bone-dim);
+}
+
+.login-other .login-way {
+    display: flex;
+    justify-content: center;
+}
+
+.login-other .login-way a {
+    text-decoration: none;
+}
+
+.login-other .login-way img {
+    width: 28px;
+    vertical-align: middle;
+    opacity: 0.7;
+    transition: opacity var(--transition-fast);
+}
+
+.login-other .login-way img:hover {
+    opacity: 1;
+}
+
+.login-other .login-way p {
+    display: inline;
+    color: var(--bone-dim);
+    font-size: 12px;
+}
+
+.login-other .login-way div {
+    margin: 0 16px;
+}
+
+/* Bottom Section */
+.content-privacy {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-privacy img {
+    height: 100px;
+    vertical-align: middle;
+    opacity: 0.8;
+}
+
+.content-privacy .box-privacy p {
+    font-size: 12px;
+    color: var(--bone-dim);
+    line-height: 20px;
+    text-align: center;
+}
+
+.content-privacy .box-privacy a {
+    color: var(--jade-glow);
+    text-decoration: none;
+}
+
+.content-privacy img:nth-child(2) {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .content {
+        width: 95vw;
+    }
+    .content-login {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hr {
+        height: 1px;
+        width: 80%;
+        margin: 20px auto;
+        background-color: var(--mist);
+    }
+    .login {
+        width: 90%;
+    }
+    .passwd form,
+    .msg form,
+    .btn {
+        width: 100%;
+    }
+}

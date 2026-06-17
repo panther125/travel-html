@@ -1,0 +1,452 @@
+/* ============================================
+   Contact Page — Dark Tomb Theme
+   ============================================ */
+
+#callbj {
+    height: 100vh;
+    background-image: url("../image/bg/call-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#callbj::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 13, 16, 0.6);
+}
+
+#fa {
+    margin-left: auto;
+    margin-right: 5%;
+    width: 380px;
+    position: relative;
+    float: right;
+    top: 15%;
+    z-index: 2;
+}
+
+/* Menu Card */
+.wrap {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.menu-frame {
+    position: relative;
+    z-index: 2;
+    transform: rotate(-15deg);
+}
+
+.menu {
+    filter: drop-shadow(0 0 20px rgba(42, 124, 94, 0.2));
+}
+
+.menu .inner {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    background-color: var(--stone-surface);
+    background-image: url("../image/bg/call-menu-bg.jpg");
+    background-size: cover;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--mist);
+}
+
+.menu-head {
+    padding: 15px 20px 20px;
+    position: relative;
+}
+
+.menu-title {
+    position: relative;
+    color: var(--bone);
+    font-size: 1.8em;
+    font-weight: 600;
+    z-index: 1;
+    display: inline-block;
+    font-family: var(--font-display);
+}
+
+.menu-title::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    right: -2px;
+    bottom: 5px;
+    height: 10px;
+    background-color: var(--jade-dim);
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.menu-info {
+    color: var(--bone-dim);
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+.menu-list {
+    padding: 10px 20px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    color: var(--bone);
+}
+
+.menu-item::after {
+    content: '';
+    display: block;
+    flex: 1;
+    border-top: 1px dotted var(--mist);
+    order: 2;
+    margin: 0 20px;
+}
+
+.menu-item .menu-name {
+    font-weight: 400;
+    order: 1;
+    letter-spacing: 1px;
+}
+
+.menu-item .menu-price {
+    order: 3;
+    color: var(--bronze);
+}
+
+.menu-item i {
+    padding: 0;
+    font-size: 1.8em;
+    color: var(--jade);
+}
+
+.menu-price .num {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Store */
+.store {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    padding: 20px;
+    position: relative;
+}
+
+.store::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 0;
+    height: 2px;
+    background-color: var(--mist);
+}
+
+.store-img {
+    width: 60px;
+    height: 60px;
+    margin-right: 16px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    border: 2px solid var(--jade-dim);
+}
+
+.store-img:hover {
+    animation: round_animate 1.8s linear infinite;
+}
+
+@keyframes round_animate {
+    to { transform: rotate(1turn); }
+}
+
+.store-info h3 {
+    margin: 0;
+    color: var(--bone);
+    font-size: 16px;
+}
+
+.store-info p {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: var(--bone-dim);
+}
+
+/* 3D Icon Animation */
+.icon-3d {
+    padding: 10px;
+    animation: icon3d 200ms 10;
+    color: var(--bone-dim);
+}
+
+.icon-3d:hover {
+    animation: icon3d 200ms infinite;
+}
+
+.fa-siz {
+    font-size: 2em;
+}
+
+@keyframes icon3d {
+    0% { text-shadow: 3px 3px var(--jade-dim), -3px -3px var(--bronze-dark); }
+    25% { text-shadow: -3px -3px var(--jade-dim), 3px 3px var(--bronze-dark); }
+    50% { text-shadow: 3px -3px var(--jade-dim), -5px 3px var(--bronze-dark); }
+    75% { text-shadow: -5px -3px var(--jade-dim), -3px -3px var(--bronze-dark); }
+    100% { text-shadow: -3px 0 var(--jade-dim), 3px -3px var(--bronze-dark); }
+}
+
+/* MacBook */
+.en_box {
+    position: absolute;
+    left: 0;
+    top: 20%;
+    height: 80%;
+    width: 22%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.macbook {
+    width: 150px;
+    height: 96px;
+    perspective: 500px;
+}
+
+.inner2 {
+    z-index: 20;
+    position: absolute;
+    width: 150px;
+    height: 96px;
+    left: 0;
+    top: 0;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg);
+    animation: rotate infinite 7s ease;
+}
+
+.screen {
+    width: 150px;
+    height: 96px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 7px;
+    background: var(--dark-stone);
+    transform-style: preserve-3d;
+    transform-origin: 50% 93px;
+    animation: lid-screen infinite 7s ease;
+    background-image: linear-gradient(45deg, rgba(0,0,0,0.34) 0%, rgba(0,0,0,0) 100%);
+    box-shadow: inset 0 3px 7px rgba(255,255,255,0.1);
+}
+
+.screen .logo {
+    position: absolute;
+    width: 20px;
+    height: 24px;
+    left: 50%;
+    top: 50%;
+    margin: -12px 0 0 -10px;
+    transform: rotateY(180deg) translateZ(0.1px);
+}
+
+.screen .face-one {
+    width: 150px;
+    height: 96px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 7px;
+    background: var(--stone-surface);
+    transform: translateZ(2px);
+    background-image: linear-gradient(45deg, rgba(0,0,0,0.24) 0%, rgba(0,0,0,0) 100%);
+}
+
+.screen .face-one .camera {
+    width: 3px;
+    height: 3px;
+    border-radius: 100%;
+    background: var(--jade-dim);
+    position: absolute;
+    left: 50%;
+    top: 4px;
+    margin-left: -1.5px;
+}
+
+.screen .face-one .display {
+    width: 130px;
+    height: 74px;
+    margin: 10px;
+    background: var(--tomb-black) no-repeat center center;
+    background-size: 100% 100%;
+    border-radius: 1px;
+    position: relative;
+    box-shadow: inset 0 0 2px rgba(0,0,0,1);
+}
+
+.screen .face-one .display .shade {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130px;
+    height: 74px;
+    background: linear-gradient(-135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 47%, rgba(255,255,255,0) 48%);
+    animation: screen-shade infinite 7s ease;
+    background-size: 300px 200px;
+}
+
+.body {
+    width: 150px;
+    height: 96px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 7px;
+    background: var(--stone-surface);
+    transform-style: preserve-3d;
+    transform-origin: 50% bottom;
+    transform: rotateX(-90deg);
+    animation: lid-body infinite 7s ease;
+    background-image: linear-gradient(45deg, rgba(0,0,0,0.24) 0%, rgba(0,0,0,0) 100%);
+}
+
+.body .face-one {
+    width: 150px;
+    height: 96px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 7px;
+    transform-style: preserve-3d;
+    background: var(--dark-stone);
+    animation: lid-keyboard-area infinite 7s ease;
+    transform: translateZ(-2px);
+    background-image: linear-gradient(30deg, rgba(0,0,0,0.24) 0%, rgba(0,0,0,0) 100%);
+}
+
+.body .touchpad {
+    width: 40px;
+    height: 31px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 4px;
+    margin: -44px 0 0 -18px;
+    background: var(--stone-surface);
+    background-image: linear-gradient(30deg, rgba(0,0,0,0.24) 0%, rgba(0,0,0,0) 100%);
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.5);
+}
+
+.body .keyboard {
+    width: 130px;
+    height: 45px;
+    position: absolute;
+    left: 7px;
+    top: 41px;
+    border-radius: 4px;
+    transform-style: preserve-3d;
+    background: var(--stone-surface);
+    background-image: linear-gradient(30deg, rgba(0,0,0,0.24) 0%, rgba(0,0,0,0) 100%);
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.4);
+    padding: 0 0 0 2px;
+}
+
+.keyboard .key {
+    width: 6px;
+    height: 6px;
+    background: var(--tomb-black);
+    float: left;
+    margin: 1px;
+    transform: translateZ(-2px);
+    border-radius: 2px;
+    box-shadow: 0 -2px 0 rgba(0,0,0,0.5);
+    animation: keys infinite 7s ease;
+}
+
+.key.space { width: 45px; }
+.key:hover { background: var(--jade-dim); }
+.key.f { height: 3px; }
+
+.body .pad {
+    width: 5px;
+    height: 5px;
+    background: var(--tomb-black);
+    border-radius: 100%;
+    position: absolute;
+}
+
+.pad.one { left: 20px; top: 20px; }
+.pad.two { right: 20px; top: 20px; }
+.pad.three { right: 20px; bottom: 20px; }
+.pad.four { left: 20px; bottom: 20px; }
+
+@keyframes rotate {
+    0% { transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg); }
+    5% { transform: rotateX(-20deg) rotateY(-20deg) rotateZ(0deg); }
+    20% { transform: rotateX(30deg) rotateY(200deg) rotateZ(0deg); }
+    25% { transform: rotateX(-60deg) rotateY(150deg) rotateZ(0deg); }
+    60% { transform: rotateX(-20deg) rotateY(130deg) rotateZ(0deg); }
+    65% { transform: rotateX(-20deg) rotateY(120deg) rotateZ(0deg); }
+    80% { transform: rotateX(-20deg) rotateY(375deg) rotateZ(0deg); }
+    85% { transform: rotateX(-20deg) rotateY(357deg) rotateZ(0deg); }
+    87% { transform: rotateX(-20deg) rotateY(360deg) rotateZ(0deg); }
+    100% { transform: rotateX(-20deg) rotateY(360deg) rotateZ(0deg); }
+}
+
+@keyframes lid-screen {
+    0% { transform: rotateX(0deg); }
+    5% { transform: rotateX(50deg); }
+    20% { transform: rotateX(-90deg); }
+    25% { transform: rotateX(15deg); }
+    30% { transform: rotateX(-5deg); }
+    38% { transform: rotateX(5deg); }
+    48%, 90% { transform: rotateX(0deg); }
+    100% { transform: rotateX(0deg); }
+}
+
+@keyframes lid-body {
+    0%, 50%, 100% { transform: rotateX(-90deg); }
+}
+
+@keyframes lid-keyboard-area {
+    0%, 100% { background-color: var(--dark-stone); }
+    50% { background-color: var(--stone-surface); }
+}
+
+@keyframes screen-shade {
+    0% { background-position: -20px 0; }
+    5% { background-position: -40px 0; }
+    20% { background-position: 200px 0; }
+    50% { background-position: -200px 0; }
+    80% { background-position: 0 0; }
+    85% { background-position: -30px 0; }
+    90%, 100% { background-position: -20px 0; }
+}
+
+@keyframes keys {
+    0%, 80%, 87%, 100% { box-shadow: 0 -2px 0 rgba(0,0,0,0.5); }
+    5% { box-shadow: 1px -1px 0 rgba(0,0,0,0.5); }
+    20%, 25%, 60% { box-shadow: -1px 1px 0 rgba(0,0,0,0.5); }
+    85% { box-shadow: 0 -2px 0 rgba(0,0,0,0.5); }
+}
+
+@media (max-width: 768px) {
+    #fa {
+        float: none;
+        margin: 100px auto 0;
+        width: 90%;
+    }
+    .menu-frame {
+        transform: rotate(0);
+    }
+    .en_box {
+        display: none;
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="登记入册 — 注册盗墓笔记纪年档案。">
+  <link rel="shortcut icon" href="../image/toux.ico" type="image/x-icon" />
+  <title>登记入册 · 注册 · 盗墓笔记纪年档案</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Noto+Serif+SC:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/journal.css">
+</head>
+
+<body class="auth-body">
+  <div class="auth-body__grain" aria-hidden="true"></div>
+
+  <a class="auth-back" href="../index.html">← 返回首页</a>
+
+  <div class="auth-card">
+    <div class="bronze-door auth-card__door" id="authDoor" aria-hidden="true" style="--seam:0;">
+      <div class="bronze-door__leaf bronze-door__leaf--left"></div>
+      <div class="bronze-door__leaf bronze-door__leaf--right"></div>
+      <div class="bronze-door__seam"></div>
+      <div class="bronze-door__lamp"></div>
+      <div class="bronze-door__frame"></div>
+    </div>
+
+    <div class="auth-head">
+      <p class="eyebrow"><span class="cn">登记</span> · Register</p>
+      <h1>立户，入册。</h1>
+      <p class="sub"><span class="cn" style="font-family:var(--ff-body)">填上你的凭信</span></p>
+    </div>
+
+    <form class="auth-form is-active" id="form-register" onsubmit="event.preventDefault(); window.location.href='./sign.html';">
+      <div class="field">
+        <label class="field__label" for="acct"><span class="cn">账号</span></label>
+        <input class="field__input" id="acct" type="text" placeholder="取一个账号" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label class="field__label" for="pwd"><span class="cn">密码</span></label>
+        <input class="field__input" id="pwd" type="password" placeholder="至少 6 位" autocomplete="new-password" required>
+      </div>
+      <div class="field">
+        <label class="field__label" for="pwd2"><span class="cn">确认密码</span></label>
+        <input class="field__input" id="pwd2" type="password" placeholder="再输一次" autocomplete="new-password" required>
+      </div>
+      <div class="field">
+        <label class="field__label" for="email"><span class="cn">邮箱</span></label>
+        <input class="field__input" id="email" type="email" placeholder="用于找回密码" autocomplete="email" required>
+      </div>
+      <button class="auth-submit" type="submit"><span class="cn">登记入册</span></button>
+    </form>
+
+    <div class="auth-divider"><span class="cn">或以其他方式入卷</span></div>
+
+    <div class="auth-others">
+      <a href="../index.html"><span class="ic" aria-hidden="true">微</span><span>微信</span></a>
+      <a href="../index.html"><span class="ic" aria-hidden="true">博</span><span>微博</span></a>
+      <a href="../index.html"><span class="ic" aria-hidden="true">Q</span><span>QQ</span></a>
+    </div>
+
+    <p class="auth-foot">
+      <span class="cn">已经入卷？</span>
+      <a href="./sign.html"><span class="cn">推门登录</span></a>
+      <span class="cn" style="color:var(--bone-faint)">· 登记即代表同意 用户协议 与 隐私政策</span>
+    </p>
+  </div>
+
+  <script src="../js/journal.js"></script>
+  <script>
+    // bronze door: seam widens when password fields are focused
+    var door = document.getElementById('authDoor');
+    ['pwd','pwd2'].forEach(function(id){
+      var el = document.getElementById(id);
+      if(!el) return;
+      el.addEventListener('focus', function(){ door.style.setProperty('--seam','0.8'); });
+      el.addEventListener('blur',  function(){ door.style.setProperty('--seam','0'); });
+    });
+
+    // confirm password mismatch
+    var form = document.getElementById('form-register');
+    var pwd = document.getElementById('pwd');
+    var pwd2 = document.getElementById('pwd2');
+    pwd2.addEventListener('input', function(){
+      if (pwd.value && pwd2.value && pwd.value !== pwd2.value) {
+        pwd2.setCustomValidity('两次输入的密码不一致');
+      } else {
+        pwd2.setCustomValidity('');
+      }
+    });
+  </script>
+</body>
+
+</html>

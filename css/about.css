@@ -1,0 +1,352 @@
+* {
+    margin: 0px;
+    border: 0;
+    cursor: url("../image/hand.png"), default;
+}
+
+ ::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+}
+
+ ::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: #49b1f5;
+    background-image: -webkit-linear-gradient(45deg, hsla(0, 0%, 100%, .4) 25%, transparent 0, transparent 50%, hsla(0, 0%, 100%, .4) 0, hsla(0, 0%, 100%, .4) 75%, transparent 0, transparent);
+    border-radius: 2em;
+}
+
+ ::-webkit-scrollbar-track {
+    background-color: rgba(73, 177, 245, .2);
+    border-radius: 2em;
+}
+
+#aboutbj {
+    height: 100vh;
+    background-image: url("https://pic.imgdb.cn/item/6278e42309475431294002d5.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.wrapBox {
+    top: 85px;
+    width: 1006px;
+    height: 760px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    /* width: 1006px;
+    height: 760px; */
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+    .box_content {
+        left: 0;
+        width: 100%;
+    }
+}
+
+.box_content {
+    top: 28px;
+    width: 80%;
+    left: 10%;
+    position: absolute;
+    z-index: 2;
+}
+
+@media screen and (max-width: 1100px) {
+    .box02_content #bar_container {
+        width: 90%;
+        margin: 0 auto;
+        float: none;
+    }
+}
+
+#bar_container {
+    float: left;
+    color: #ffffff;
+    width: 50%;
+}
+
+#bar_container .bar {
+    margin: 30px 0;
+}
+
+.bar.active[data-percent="70"] {
+    width: 70%;
+}
+
+.bar.mint {
+    background-color: #14c3a2;
+    background-image: repeating-linear-gradient(-45deg, #14c3a2, #14c3a2 30px, #22e8c3 30px, #22e8c3 60px);
+    background-size: 600px 100%;
+    animation: barberpole 12s linear infinite;
+    -webkit-animation: barberpole 12s linear infinite;
+    -moz-animation: barberpole 12s linear infinite;
+    -o-animation: barberpole 12s linear infinite;
+    -ms-accelerator: barberpole 12s linear infinite;
+    border-bottom: 5px solid #0d7e68;
+}
+
+.bar {
+    height: 40px;
+    width: 0;
+    transition: width 1.2s ease-in-out;
+    -webkit-transition: width 1.2s ease-in-out;
+    -moz-transition: width 1.2s ease-in-out;
+    -ms-transition: width 1.2s ease-in-out;
+    position: relative;
+    margin: 30px 0;
+    border-radius: 4px;
+}
+
+.bar.active:after,
+.bar.active:before {
+    opacity: 1;
+    font-size: 16px;
+}
+
+.bar:before {
+    content: attr(data-skill);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    height: 40px;
+    font-style: italic;
+    opacity: 0;
+    transition: opacity 2s 0.6s;
+    -webkit-transition: opacity 2s 0.6s;
+    -moz-transition: opacity 2s 0.6s;
+    -ms-transition: opacity 2s 0.6s;
+    -o-animation: opacity 2s 0.6s;
+}
+
+.bar.active:after,
+.bar.active:before {
+    opacity: 1;
+    font-size: 16px;
+}
+
+.bar:after {
+    content: attr(data-percent) "%";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 2s 0.6s;
+    -webkit-transition: opacity 2s 0.6s;
+    -moz-transition: opacity 2s 0.6s;
+    -ms-transition: opacity 2s 0.6s;
+    -o-animation: opacity 2s 0.6s;
+}
+
+.bar.active[data-percent="50"] {
+    width: 50%;
+}
+
+.bar.red {
+    background-color: #cf4647;
+    background-image: repeating-linear-gradient(-45deg, #cf4647, #cf4647 30px, #da6e6f 30px, #da6e6f 60px);
+    background-size: 600px 100%;
+    animation: barberpole 12s linear infinite;
+    -webkit-animation: barberpole 12s linear infinite;
+    -moz-animation: barberpole 12s linear infinite;
+    -o-animation: barberpole 12s linear infinite;
+    -ms-accelerator: barberpole 12s linear infinite;
+    border-bottom: 5px solid #9f292a;
+}
+
+.bar.lila {
+    background-color: #9a3fd6;
+    background-image: repeating-linear-gradient(-45deg, #bc69d8, #9a3fd6 30px, #bc69d8 30px, #9a3fd6 60px);
+    background-size: 600px 100%;
+    animation: barberpole 12s linear infinite;
+    -webkit-animation: barberpole 12s linear infinite;
+    -moz-animation: barberpole 12s linear infinite;
+    -ms-accelerator: barberpole 12s linear infinite;
+    -o-animation: barberpole 12s linear infinite;
+    border-bottom: 5px solid #2a242c;
+}
+
+.bar.orange {
+    background-color: #eb7b59;
+    background-image: repeating-linear-gradient(-45deg, #eb7b59, #eb7b59 30px, #f09f87 30px, #f09f87 60px);
+    background-size: 600px 100%;
+    animation: barberpole 12s linear infinite;
+    -webkit-animation: barberpole 12s linear infinite;
+    -moz-animation: barberpole 12s linear infinite;
+    -o-animation: barberpole 12s linear infinite;
+    -ms-accelerator: barberpole 12s linear infinite;
+    border-bottom: 5px solid #dd481b;
+}
+
+.bar.active[data-percent="30"] {
+    width: 30%;
+}
+
+.bar.gray {
+    background-color: #24b2dd;
+    background-image: repeating-linear-gradient(-45deg, #1ca7d1, #24b2dd 30px, #1ca7d1 30px, #24b2dd 60px);
+    background-size: 600px 100%;
+    animation: barberpole 12s linear infinite;
+    -webkit-animation: barberpole 12s linear infinite;
+    -moz-animation: barberpole 12s linear infinite;
+    -ms-accelerator: barberpole 12s linear infinite;
+    -o-animation: barberpole 12s linear infinite;
+    border-bottom: 5px solid #333434;
+}
+
+.bar.blue {
+    background-color: blueviolet;
+    background-image: repeating-linear-gradient(-45deg, #595b5a, #595b5a 30px, #727574 30px, #727574 60px);
+    background-size: 600px 100%;
+    animation: barberpole 12s linear infinite;
+    -webkit-animation: barberpole 12s linear infinite;
+    -moz-animation: barberpole 12s linear infinite;
+    -o-animation: barberpole 12s linear infinite;
+    -ms-accelerator: barberpole 12s linear infinite;
+    border-bottom: 5px solid #333434;
+}
+
+.bar.active[data-percent="60"] {
+    width: 60%;
+}
+
+.bar.green {
+    background-color: green;
+    background-image: repeating-linear-gradient(-45deg, #cf4647, #cf4647 30px, #da6e6f 30px, #da6e6f 60px);
+    background-size: 600px 100%;
+    animation: barberpole 12s linear infinite;
+    -webkit-animation: barberpole 12s linear infinite;
+    -moz-animation: barberpole 12s linear infinite;
+    -o-animation: barberpole 12s linear infinite;
+    -ms-accelerator: barberpole 12s linear infinite;
+    border-bottom: 5px solid #dd481b;
+}
+
+#box02_text {
+    float: left;
+    width: 50%;
+    min-width: 400px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#box02_text h1 {
+    font-size: 25px;
+    font-weight: lighter;
+    color: #ffffff;
+    margin-top: 25px;
+    text-align: center;
+    position: relative;
+    right: -100%;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transform: all 0.5s;
+}
+
+.overline {
+    width: 100%;
+    height: 0;
+    border-bottom: 1px dashed #ffffff;
+    position: relative;
+    right: -100%;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transform: all 0.5s;
+}
+
+#box02_text p {
+    font-size: 20px;
+    font-weight: lighter;
+    color: #ffffff;
+    line-height: 38px;
+    text-align: center;
+    position: relative;
+    right: -100%;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transform: all 0.5s;
+}
+
+#box02_text p:hover {
+    font-size: 22px;
+}
+
+@keyframes barberpole {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 600px 0%;
+    }
+}
+
+@-webkit-keyframes barberpole {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 600px 0%;
+    }
+}
+
+@-moz-keyframes barberpole {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 600px 0%;
+    }
+}
+
+@-ms-keyframes barberpole {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 600px 0%;
+    }
+}
+
+@-o-keyframes barberpole {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 600px 0%;
+    }
+}
+
+@keyframes clockwise {
+    from {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}

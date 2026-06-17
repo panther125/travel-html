@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="入卷 — 登录盗墓笔记纪年档案。">
+  <link rel="shortcut icon" href="../image/toux.ico" type="image/x-icon" />
+  <title>入卷 · 登录 · 盗墓笔记纪年档案</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Noto+Serif+SC:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/journal.css">
+</head>
+
+<body class="auth-body">
+  <div class="auth-body__grain" aria-hidden="true"></div>
+
+  <a class="auth-back" href="../index.html">← 返回首页</a>
+
+  <div class="auth-card">
+    <!-- small bronze door: seam widens when a password field is focused -->
+    <div class="bronze-door auth-card__door" id="authDoor" aria-hidden="true" style="--seam:0;">
+      <div class="bronze-door__leaf bronze-door__leaf--left"></div>
+      <div class="bronze-door__leaf bronze-door__leaf--right"></div>
+      <div class="bronze-door__seam"></div>
+      <div class="bronze-door__lamp"></div>
+      <div class="bronze-door__frame"></div>
+    </div>
+
+    <div class="auth-head">
+      <p class="eyebrow"><span class="cn">入卷</span> · Sign In</p>
+      <h1>推门，进来。</h1>
+      <p class="sub"><span class="cn" style="font-family:var(--ff-body)">登录你的档案</span></p>
+    </div>
+
+    <div class="auth-tabs" role="tablist">
+      <button class="is-active" data-tab="passwd" role="tab" aria-selected="true"><span class="cn">密码登录</span></button>
+      <button data-tab="msg" role="tab" aria-selected="false"><span class="cn">短信登录</span></button>
+    </div>
+
+    <!-- 密码登录 -->
+    <form class="auth-form is-active" id="form-passwd" onsubmit="event.preventDefault(); window.location.href='../index.html';">
+      <div class="field">
+        <label class="field__label" for="acct"><span class="cn">账号</span></label>
+        <input class="field__input" id="acct" type="text" placeholder="输入你的账号" autocomplete="username">
+      </div>
+      <div class="field">
+        <label class="field__label" for="pwd"><span class="cn">密码</span></label>
+        <input class="field__input" id="pwd" type="password" placeholder="输入密码" autocomplete="current-password">
+      </div>
+      <button class="auth-submit" type="submit"><span class="cn">推门入卷</span></button>
+    </form>
+
+    <!-- 短信登录 -->
+    <form class="auth-form" id="form-msg" onsubmit="event.preventDefault(); window.location.href='../index.html';">
+      <div class="field">
+        <label class="field__label" for="phone"><span class="cn">手机号</span></label>
+        <div class="field__row">
+          <input class="field__input" id="phone" type="tel" placeholder="输入手机号" style="flex:0 0 5rem;">
+          <input class="field__input" type="tel" placeholder="11 位手机号">
+        </div>
+      </div>
+      <div class="field">
+        <label class="field__label" for="code"><span class="cn">验证码</span></label>
+        <div class="field__row">
+          <input class="field__input" id="code" type="text" placeholder="6 位验证码" inputmode="numeric">
+          <button class="field__code" type="button" id="getCode">获取验证码</button>
+        </div>
+      </div>
+      <button class="auth-submit" type="submit"><span class="cn">推门入卷</span></button>
+    </form>
+
+    <div class="auth-divider"><span class="cn">或以其他方式入卷</span></div>
+
+    <div class="auth-others">
+      <a href="../index.html"><span class="ic" aria-hidden="true">微</span><span>微信</span></a>
+      <a href="../index.html"><span class="ic" aria-hidden="true">博</span><span>微博</span></a>
+      <a href="../index.html"><span class="ic" aria-hidden="true">Q</span><span>QQ</span></a>
+    </div>
+
+    <p class="auth-foot">
+      <span class="cn">还未入卷？</span>
+      <a href="./login.html"><span class="cn">登记入册</span></a>
+      <span class="cn" style="color:var(--bone-faint)">· 登录即代表同意 用户协议 与 隐私政策</span>
+    </p>
+  </div>
+
+  <script src="../js/journal.js"></script>
+  <script>
+    // tabs
+    var tabs = document.querySelectorAll('.auth-tabs button');
+    var forms = document.querySelectorAll('.auth-form');
+    tabs.forEach(function(t){
+      t.addEventListener('click', function(){
+        tabs.forEach(function(x){ x.classList.remove('is-active'); x.setAttribute('aria-selected','false'); });
+        t.classList.add('is-active'); t.setAttribute('aria-selected','true');
+        forms.forEach(function(f){ f.classList.remove('is-active'); });
+        document.getElementById('form-' + t.dataset.tab).classList.add('is-active');
+      });
+    });
+
+    // bronze door: seam widens when a password/verify field is focused
+    var door = document.getElementById('authDoor');
+    var openers = document.querySelectorAll('#pwd, #code');
+    openers.forEach(function(el){
+      el.addEventListener('focus', function(){ door.style.setProperty('--seam','0.8'); });
+      el.addEventListener('blur',  function(){ door.style.setProperty('--seam','0'); });
+    });
+
+    // verification code countdown
+    var codeBtn = document.getElementById('getCode');
+    if (codeBtn) {
+      codeBtn.addEventListener('click', function(){
+        var n = 60; codeBtn.disabled = true;
+        codeBtn.textContent = n + 's 后重取';
+        var t = setInterval(function(){
+          n--; if (n<=0){ clearInterval(t); codeBtn.disabled=false; codeBtn.textContent='获取验证码'; }
+          else { codeBtn.textContent = n + 's 后重取'; }
+        }, 1000);
+      });
+    }
+  </script>
+</body>
+
+</html>

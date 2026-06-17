@@ -1,0 +1,168 @@
+* {
+    margin: 0px;
+    border: 0;
+    cursor: url("../image/hand.png"), default;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+ ::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: #49b1f5;
+    background-image: -webkit-linear-gradient(45deg, hsla(0, 0%, 100%, .4) 25%, transparent 0, transparent 50%, hsla(0, 0%, 100%, .4) 0, hsla(0, 0%, 100%, .4) 75%, transparent 0, transparent);
+    border-radius: 2em;
+}
+
+ ::-webkit-scrollbar-track {
+    background-color: rgba(73, 177, 245, .2);
+    border-radius: 2em;
+}
+
+#aboutbj {
+    height: 100vh;
+    background-image: url("https://pic.imgdb.cn/item/62792d45094754312909b2d3.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.post.news.top {
+    padding-top: 10px;
+}
+
+.post.news {
+    width: 1260px;
+}
+
+.post.news .PostNews {
+    margin-right: -20px;
+}
+
+div,
+ul {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.post.news li {
+    width: calc(100% / 4 - 20px);
+    height: 440px;
+    float: left;
+    margin: 15px 20px 15px 0;
+    padding: 0;
+}
+
+.imgBox {
+    margin-top: 0;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.imgBox:hover {
+    height: 350px;
+    overflow: hidden;
+}
+
+a {
+    color: #212121;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+.post.news {
+    margin-top: 50px;
+    padding-left: 90px;
+    padding-right: 50px;
+}
+
+.imgBox:after {
+    content: '';
+    display: block;
+    padding-top: 72%;
+}
+
+.PostNews li img {
+    position: absolute;
+    float: left;
+    top: 0;
+    left: 0;
+}
+
+.post.news .PostNews .imgBox:after {
+    content: '';
+    display: block;
+    padding-top: 72%;
+}
+
+.post.news li:hover .imgText {
+    background: #F4CE58;
+}
+
+.post.news li .imgText {
+    text-align: left;
+    background: #f6f5f5;
+    padding: 15px 15px 35px 15px;
+    position: relative;
+}
+
+.post.news .imgText h4 {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0px 0 5px;
+    overflow: hidden;
+    margin: 0 2em 0;
+}
+
+.post li h4 {
+    overflow: hidden;
+    clear: both;
+    margin: 0 0 5px;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 0 20px;
+    color: #333;
+}
+
+.post.news .imgText p {
+    height: 34px;
+    padding: 0px;
+    font-size: 12px;
+    color: rgb(119, 115, 115);
+    overflow: hidden;
+}
+
+.time {
+    float: left;
+    left: 15;
+    bottom: 12px;
+    height: 12px;
+    line-height: 12px;
+}
+
+.right {
+    float: left;
+    margin-top: 70px;
+    padding-left: 250px;
+    width: 32px;
+    height: 50px;
+    background-image: url("../image/right.svg");
+}
+
+.right:hover {
+    float: left;
+    padding-left: 250px;
+    width: 40px;
+    height: 50px;
+}
